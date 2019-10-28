@@ -31,7 +31,8 @@ public class baseTest {
                 new Thread(() -> {
                     driver.quit();
                     driver = null;
-                }));
+                }
+                ));
     }
 
 
