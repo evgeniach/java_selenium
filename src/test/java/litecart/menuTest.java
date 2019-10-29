@@ -18,7 +18,7 @@ public class menuTest extends baseTest{
 
     @Test
     public void login() throws Exception{
-        driver.get("http://localhost:8080/litecart/admin/login.php");
+        driver.get("http://localhost/litecart/admin/login.php");
         driver.findElement(By.name("username")).sendKeys("admin");
         driver.findElement(By.name("password")).sendKeys("admin");
         driver.findElement(By.name("login")).click();
@@ -42,8 +42,6 @@ public class menuTest extends baseTest{
     }
 
     @After
-    public void stop() {
-        driver.quit();
-        driver=null;
+    public void tearDown() throws Exception {
     }
 }
