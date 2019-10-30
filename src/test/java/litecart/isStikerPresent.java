@@ -23,9 +23,9 @@ public class isStikerPresent extends baseTest{
     public void login() throws Exception{
         driver.get("http://localhost/litecart/en/");
 
-        List<WebElement> products = driver.findElements(By.xpath(".//div[@class='image-wrapper']"));
+        List<WebElement> products = driver.findElements(By.cssSelector(".product"));
         for(int i=0; i<products.size(); i++) {
-            assertEquals(1, products.get(i).findElements(By.xpath(".//div")).size());
+            assertEquals(1, products.get(i).findElements(By.cssSelector(".sticker")).size());
         }
 
     }
