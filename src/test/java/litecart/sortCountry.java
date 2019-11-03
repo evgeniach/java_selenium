@@ -114,13 +114,15 @@ public class sortCountry extends baseTest {
         assertEquals(sortSequence,sequence);;
     }
 
-    
+
     public ArrayList getText(ArrayList<WebElement> pageElements) {
         List<String> gettText = new ArrayList<>();
 
-        for(int i=0;i<pageElements.size()-1;i++) {
+        for(int i=0;i<pageElements.size();i++) {
             gettText.add(pageElements.get(i).getText());
         }
+        //list.removeAll(Arrays.asList("", null));
+        gettText.removeAll(Collections.singleton(""));
         return (ArrayList) gettText;
     }
 
