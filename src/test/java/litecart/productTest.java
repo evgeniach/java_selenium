@@ -108,13 +108,6 @@ public class productTest extends baseTest {
     public void tearDown() throws Exception {
     }
 
-    public String[] getRGBColor(String color) {
-        color = color.replaceAll(".*\\(|\\).*", "");
-        color = color.replaceAll("\\s+","");
-        String[] RGB = color.split(",");
-        return RGB;
-    }
-
     public double getFontSize(String size) {
         size = size.replaceAll("px", "");
         double  priceSize =  Double.parseDouble(size);

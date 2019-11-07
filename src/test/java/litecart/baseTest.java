@@ -35,4 +35,11 @@ public class baseTest {
                 }));
     }
 
+    public String[] getRGBColor(String color) {
+        color = color.replaceAll(".*\\(|\\).*", "");
+        color = color.replaceAll("\\s+", "");
+        String[] RGB = color.split(",");
+        return RGB;
+    }
+
 }
