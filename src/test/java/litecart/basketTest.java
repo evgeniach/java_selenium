@@ -71,7 +71,6 @@ public class basketTest extends baseTest {
 
 
     void goToProductDetailPage(WebDriver driver, int i) {
-        //wait.until(presenceOfElementLocated(By.cssSelector(("li[class*=product] a.link"))));
         List<WebElement> product = new ArrayList<>();
         product=driver.findElements(By.cssSelector(("li[class*=product] a.link")));
         product.get(i).click();
