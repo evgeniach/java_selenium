@@ -1,9 +1,14 @@
 package litecart;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 public class baseTest {
@@ -25,7 +30,7 @@ public class baseTest {
         //FirefoxOptions options = new FirefoxOptions();
         //options.setBinary(new FirefoxBinary(new File("c:\\Program Files\\Firefox Nightly\\firefox.exe")));
         //driver = new FirefoxDriver(options);
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         this.wait = new WebDriverWait(driver, 10);
 
         Runtime.getRuntime().addShutdownHook(
@@ -42,4 +47,7 @@ public class baseTest {
         return RGB;
     }
 
+    boolean isElementPresent(WebDriver driver, By locator) {
+        return driver.findElements(locator).size()>0;
+    }
 }
