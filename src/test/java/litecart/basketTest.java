@@ -8,45 +8,41 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
-import static org.openqa.selenium.support.ui.ExpectedConditions.presenceOfElementLocated;
+
+import static org.junit.Assert.assertEquals;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class basketTest extends baseTest {
-
+    Integer N=3;
 
     @Before
     public void start() throws Exception {
         this.init();
-        driver.get("http://litecart.stqa.ru/ru/");
+        driver.get("http://localhost:8080/litecart/en/");
     }
 
     @Test
     public void basketTest() throws Exception {
 
-        goToProductDetailPage(driver,1);
-        addProductToBasket(driver);
+        for(int i=0;i<N;i++) {
+            driver.findElement(By.cssSelector("[id=logotype-wrapper] a")).click();
+            goToProductDetailPage(driver,i+1);
+            addProductToBasket(driver);
+        }
 
-        driver.findElement(By.cssSelector("[id=logotype-wrapper] a")).click();
-        goToProductDetailPage(driver,2);
-        addProductToBasket(driver);
-
-        driver.findElement(By.cssSelector("[id=logotype-wrapper] a")).click();
-        goToProductDetailPage(driver,3);
-        addProductToBasket(driver);
-
-        //Thread.sleep(6000L);
         driver.findElement(By.xpath("//*[text()='Checkout »']")).click();
-       // Thread.sleep(2000L);
 
-        removeProduct(driver);
-        removeProduct(driver);
-        removeProduct(driver);
+        for(int i=0;i<N;i++) {
+            removeProduct(driver);
+        }
 
-        driver.findElement(By.cssSelector("[id=logotype-wrapper] a")).click();
+        assertEquals(driver.findElement(By.cssSelector("em")).getText(),"There are no items in your cart.");
 
+    }
 
+    private void assertTrue() {
     }
 
     @After
