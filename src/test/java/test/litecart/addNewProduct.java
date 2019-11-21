@@ -1,4 +1,4 @@
-package litecart;
+package test.litecart;
 
 import org.junit.After;
 import org.junit.Before;
@@ -9,13 +9,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
 import java.io.File;
-import java.util.ArrayList;
-import java.util.List;
 
 import static org.junit.Assert.assertTrue;
 
 public class addNewProduct extends baseTest {
-
+/*
     String programName = "productName_"+java.util.UUID.randomUUID().toString();
     File f = new File("test_image.jpg");
 
@@ -87,4 +85,5 @@ public class addNewProduct extends baseTest {
         @After
     public void tearDown() throws Exception {
     }
+ */
 }

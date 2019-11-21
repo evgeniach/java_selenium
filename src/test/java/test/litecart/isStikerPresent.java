@@ -1,4 +1,4 @@
-package litecart;
+package test.litecart;
 
 import org.junit.After;
 import org.junit.Before;
@@ -6,7 +6,6 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.Assert.assertEquals;
@@ -14,6 +13,7 @@ import static org.junit.Assert.assertTrue;
 
 public class isStikerPresent extends baseTest{
 
+    /*
     @Before
     public void start() throws Exception {
         this.init();
@@ -33,4 +33,6 @@ public class isStikerPresent extends baseTest{
     @After
     public void tearDown() throws Exception {
     }
+
+     */
 }

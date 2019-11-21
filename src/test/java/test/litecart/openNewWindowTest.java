@@ -1,11 +1,9 @@
-package litecart;
+package test.litecart;
 
-import org.checkerframework.checker.nullness.qual.Nullable;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 
@@ -15,6 +13,7 @@ import java.util.Set;
 
 public class openNewWindowTest extends baseTest {
 
+    /*
     @Before
     public void start() throws Exception {
         this.init();
@@ -53,5 +52,6 @@ public class openNewWindowTest extends baseTest {
     @After
     public void tearDown() throws Exception {
     }
+*/
 
     }

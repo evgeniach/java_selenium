@@ -1,4 +1,4 @@
-package litecart;
+package test.litecart;
 
 import org.junit.After;
 import org.junit.Before;
@@ -11,6 +11,7 @@ import java.util.List;
 
 public class menuTest extends baseTest{
 
+    /*
     @Before
     public void start() throws Exception {
         this.init();
@@ -44,4 +45,6 @@ public class menuTest extends baseTest{
     @After
     public void tearDown() throws Exception {
     }
+    */
+
 }

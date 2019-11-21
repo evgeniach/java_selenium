@@ -1,4 +1,4 @@
-package litecart;
+package test.litecart;
 
 import org.junit.After;
 import org.junit.Before;
@@ -11,6 +11,7 @@ import static org.junit.Assert.assertTrue;
 
 public class productTest extends baseTest {
 
+    /*
     @Before
     public void start() throws Exception {
         this.init();
@@ -113,5 +114,7 @@ public class productTest extends baseTest {
         double  priceSize =  Double.parseDouble(size);
         return priceSize;
     }
+    */
+
 
 }
